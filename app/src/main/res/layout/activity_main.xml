@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#0f6bac"
+    android:id="@+id/weather_background"
+    android:weightSum="1">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.75"
+        android:weightSum="1">
+
+        <!--当日天气图片-->
+        <TextView
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prov"
+            android:text=""
+            android:textSize="35sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.3"
+            />
+        <TextView
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/city"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.2"
+            />
+        <!--当日天气日期-->
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" "
+            android:textColor="@color/textColor"
+            android:id="@+id/weatherdate"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.1" />
+            <!--当日天气情况-->
+            <TextView
+                android:textSize="35sp"
+
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/dayweather" />
+
+            <!--当日天气温度-->
+            <TextView
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="35sp"
+
+                android:id="@+id/max" />
+
+<!--pm2.5 空气质量 风速风向-->
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:textColor="@color/textColor"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.1">
+            <!--pm2.5的值-->
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="湿度"
+                 />
+            <!--空气质量指数-->
+            <TextView
+                android:textSize="20sp"
+
+                android:textColor="@color/textColor"
+                android:layout_weight="0.48"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="降水"
+                 />
+            <!--风向-->
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风向"
+                />
+            <!--风速-->
+            <TextView
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:layout_weight="0.48"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="风速"
+                 />
+        </LinearLayout>
+
+
+<!--pm2.5 空气质量 风级别 风速-->
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:textColor="@color/textColor"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.1">
+            <!--pm2.5的值-->
+            <TextView
+                android:textSize="20sp"
+
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/pm25" />
+            <!--空气质量指数-->
+            <TextView
+                android:textSize="20sp"
+
+                android:textColor="@color/textColor"
+                android:layout_weight="0.48"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/pm" />
+            <!--风向-->
+            <TextView
+                android:textSize="20sp"
+
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/wind" />
+            <!--风速-->
+            <TextView
+                android:textSize="20sp"
+
+                android:textColor="@color/textColor"
+                android:layout_weight="0.48"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/windspace" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--下面未来三天天气-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.15"
+        android:weightSum="1">
+      <!--第一天-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/five_day_weather_data_siae"
+                android:textColor="@color/textColor"
+                android:id="@+id/first_data"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.2" />
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:gravity="right"
+                    android:textSize="@dimen/five_day_weather_siae"
+                    android:layout_gravity="center"
+
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/first_max_weather" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转"
+                    />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/first_min_weather" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/first_max" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_xiegang_size"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xiegang"
+                     />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/first_min" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--第一天到此-->
+
+        <!--第二天开始-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+
+
+            <TextView
+                android:textSize="@dimen/five_day_weather_data_siae"
+
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:id="@+id/second_data"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.2" />
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/second_max_weather" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转"
+                     />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/second_min_weather" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/second_max" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_xiegang_size"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xiegang"
+                    />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/second_min" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--第二天到此-->
+        <!--第三天开始-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+
+
+            <TextView
+                android:textSize="@dimen/five_day_weather_data_siae"
+
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/third_data"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.2" />
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/third_max_weather" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转"
+                     />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/third_min_weather" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:textColor="@color/textColor"
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/third_max" />
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_xiegang_size"
+
+                    android:textColor="@color/textColor"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xiegang"
+                    />
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:textColor="@color/textColor"
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/third_min" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--第三天到此-->
+
+        <!--第四天开始-->
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+            <TextView
+                android:textSize="@dimen/five_day_weather_data_siae"
+
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/fourth_data"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.2" />
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fourth_max_weather" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转"
+                    />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fourth_min_weather" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:textColor="@color/textColor"
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fourth_max" />
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_xiegang_size"
+
+                    android:textColor="@color/textColor"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xiegang"
+                    />
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:textColor="@color/textColor"
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fourth_min" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--第四天到此-->
+        <!--第五天开始-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.2"
+            android:weightSum="1">
+
+
+
+            <TextView
+                android:textSize="@dimen/five_day_weather_data_siae"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/fifth_data"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.2" />
+
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fifth_max_weather" />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转"
+                    />
+
+                <TextView
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/five_day_weather_siae"
+
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fifth_min_weather" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:textColor="@color/textColor"
+                    android:gravity="right"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fifth_max" />
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_xiegang_size"
+
+                    android:textColor="@color/textColor"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xiegang"
+                    />
+
+                <TextView
+                    android:textSize="@dimen/five_day_weather_tem_size"
+
+                    android:textColor="@color/textColor"
+                    android:layout_weight="0.45"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/fifth_min" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--第五天到此-->
+
+
+    </LinearLayout>
+    <!--底-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:background="#f823849b">
+
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/switch_city"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/home" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/refresh_weather"
+            android:background="@drawable/refresh"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/setting"
+            android:background="@drawable/setting"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

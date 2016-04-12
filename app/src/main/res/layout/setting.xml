@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/setting_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="穿衣指数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dress_but" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="紫外指数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/uv_but" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="洗车指数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cw_but" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="旅游指数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trav_but" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="感冒指数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flu_but" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="运动指数"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sport_but" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="意见与建议"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/suggest_btn" />
+    <Button
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/setting_button_backgroung_size"
+        android:background="@drawable/corners_setting_background"
+        android:textColor="@color/textColor"
+        android:text="关于"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about_btn" />
+
+</LinearLayout>
